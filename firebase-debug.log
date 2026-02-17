@@ -1,0 +1,45 @@
+[debug] [2026-02-17T09:31:58.071Z] ----------------------------------------------------------------------
+[debug] [2026-02-17T09:31:58.074Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /home/user/.global_modules/bin/firebase init hosting:github
+[debug] [2026-02-17T09:31:58.074Z] CLI Version:   15.6.0
+[debug] [2026-02-17T09:31:58.074Z] Platform:      linux
+[debug] [2026-02-17T09:31:58.074Z] Node Version:  v20.19.1
+[debug] [2026-02-17T09:31:58.074Z] Time:          Tue Feb 17 2026 09:31:58 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-02-17T09:31:58.075Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-17T09:31:58.077Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-02-17T09:31:58.960Z] No OAuth tokens found
+[debug] [2026-02-17T09:31:58.960Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/the-museum
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-02-17T09:31:59.340Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-02-17T09:31:59.340Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2026-02-17T09:32:10.050Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-02-17T09:32:50.651Z] Running auto auth
+[debug] [2026-02-17T09:33:10.150Z] No OAuth tokens found
+[debug] [2026-02-17T09:33:10.151Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-02-17T09:33:10.151Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"studio-9288658946-31a8f","name":"no days off"}
+[debug] [2026-02-17T09:33:10.982Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2026-02-17T09:33:10.983Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2026-02-17T09:33:10.989Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 409, Requested entity already exists
+    at responseToError (/home/user/.global_modules/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/home/user/.global_modules/lib/node_modules/firebase-tools/lib/apiv2.js:330:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID studio-9288658946-31a8f. Please try again with a unique project ID.
